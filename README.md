@@ -175,7 +175,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Tanmay Mishra**  
 [![GitHub](https://img.shields.io/badge/GitHub-tanmaymishra5612-black?logo=github)](https://github.com/tanmaymishra5612)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Tanmay_Mishra-blue?logo=linkedin)](https://linkedin.com/in/tanmaymishra5612)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Tanmay_Mishra-blue?logo=linkedin)](https://www.linkedin.com/in/tanmay-mishra-0ab1b2279/
+)
 [![Email](https://img.shields.io/badge/Email-tanmaymishra5612@gmail.com-red?logo=gmail)](mailto:tanmaymishra5612@gmail.com)
 
 ---
