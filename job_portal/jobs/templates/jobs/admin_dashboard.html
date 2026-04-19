@@ -1,0 +1,38 @@
+{% extends 'jobs/base.html' %}
+{% block content %}
+<h2>Admin Panel</h2>
+<a href="{% url 'add_job' %}" class="btn btn-success mb-3">+ Add Job</a>
+
+<form method="get" class="d-flex mb-3">
+    <input name="role" value="{{ role }}" class="form-control me-2" placeholder="Filter by role...">
+    <button class="btn btn-primary">Filter</button>
+</form>
+
+<h4>Job Listings</h4>
+<table class="table table-bordered">
+    <tr><th>Title</th><th>Location</th><th>Skills</th><th>Actions</th></tr>
+    {% for job in jobs %}
+    <tr>
+        <td>{{ job.title }}</td>
+        <td>{{ job.location }}</td>
+        <td>{{ job.skills }}</td>
+        <td>
+            <a href="{% url 'edit_job' job.id %}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="{% url 'delete_job' job.id %}" class="btn btn-danger btn-sm"
+               onclick="return confirm('Delete this job?')">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h4>Applications</h4>
+<table class="table table-striped">
+    <tr><th>Name</th><th>Email</th><th>Phone</th><th>Applied For</th><th>Date</th></tr>
+    {% for a in applicants %}
+    <tr>
+        <td>{{ a.name }}</td><td>{{ a.email }}</td><td>{{ a.phone }}</td>
+        <td>{{ a.job.title }}</td><td>{{ a.applied_at|date:"d M Y" }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

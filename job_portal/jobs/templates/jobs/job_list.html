@@ -1,0 +1,20 @@
+{% extends 'jobs/base.html' %}
+{% block content %}
+<h2>Available Jobs</h2>
+<form method="get" class="d-flex mb-3">
+    <input name="role" value="{{ role }}" class="form-control me-2" placeholder="Filter by job role...">
+    <button class="btn btn-primary">Search</button>
+</form>
+{% for job in jobs %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5>{{ job.title }} — {{ job.location }}</h5>
+        <p>{{ job.description }}</p>
+        <small><b>Skills:</b> {{ job.skills }}</small><br>
+        <a href="{% url 'apply_job' job.id %}" class="btn btn-success btn-sm mt-2">Apply Now</a>
+    </div>
+</div>
+{% empty %}
+<p>No jobs found.</p>
+{% endfor %}
+{% endblock %}
