@@ -1,4 +1,4 @@
-# 🏢 Job Application Portal
+# 🏢 Job Application Portal -
 
 A full-stack **Job Application Portal** built with Python and Django, where candidates can browse and apply for jobs, and admins can manage everything from a dedicated backend panel.
 
